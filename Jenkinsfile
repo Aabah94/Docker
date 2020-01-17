@@ -1,7 +1,11 @@
 pipeline {
+    
     def app
+    
     stage('SCM checkout'){
+        
         git credentialsId: 'git-creds', url: 'https://github.com/jenkins540/myapp.git'
+        
     }
     stage('MVN Package'){
         def mvnHome = tool name :'maven 3' , type: 'maven'
