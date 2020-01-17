@@ -1,7 +1,7 @@
 node {    
     def app    
     stage('SCM checkout'){        
-        git credentialsId: 'git-creds', url: 'https://github.com/jenkins540/myapp.git'
+        git credentialsId: 'git-creds', url: 'https://github.com/Aabah94/NodeApp.git'
     }
     stage('MVN Package'){
         def mvnHome = tool name :'maven 3' , type: 'maven'
