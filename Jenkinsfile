@@ -12,7 +12,7 @@ node {
         app= docker.build("aabha94/myapp:${env.BUILD_ID}")
     }
     stage('Deploy Image'){
-        app.run('--name myapp')
+        app.run('--name myapp -p 8081:8080')
     }
     stage('Remove Container'){
         app.rm()
